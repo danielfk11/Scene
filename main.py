@@ -1,9 +1,9 @@
-# CRIAR EXECUTAVEL PARA TRANSFORMAR EM ARQUIVO UPAR NO GITHUB COM UM SITE PARA DOWNLOAD.
+# CRIAR EXECUTAVEL PARA TRANSFORMAR EM ARQUIVO/SITE PARA DOWNLOAD. V1.0.0
 from pytube import YouTube                                              
 import time
 
-file = "D:\Projects Development\Scene\scenes"                                       #pasta onde salvar os videos baixados
-file_logs = "D:\Projects Development\Scene\logs"                                                    
+file = ""                                       #pasta onde salvar os videos baixados
+file_logs = ""                                  #pasta para criar o arquivo de logs(apagavel)           
 url = input(str("Digite a url que deseja baixar: "))
 
 try:
@@ -22,11 +22,11 @@ if type_video == "mp4":
 
 text = "\n{} Media -> {}, Name -> {}({})".format(url, type_video, yt.title, yt.author)
 
-try:
-    with open(file_logs, "a") as log:
-        log.write(text)
-except:
-    print("[ERROR] Tipo de link invalido, nao foi possivel salvar nas logs.")
+try:                                                                          #DELETE CASO NAO QUEIRA LOGS
+    with open(file_logs, "a") as log:                                         #DELETE CASO NAO QUEIRA LOGS
+        log.write(text)                                                       #DELETE CASO NAO QUEIRA LOGS
+except:                                                                       #DELETE CASO NAO QUEIRA LOGS
+    print("[ERROR] Tipo de link invalido, nao foi possivel salvar nas logs.") #DELETE CASO NAO QUEIRA LOGS
 
 print("Fazendo download...")
 time.sleep(5)
