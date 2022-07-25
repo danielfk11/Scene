@@ -20,13 +20,13 @@ if type_video == "mp3":
 if type_video == "mp4":
     stream.download(output_path=file)
 
-text = "\n{} Media -> {}, Name -> {}({})".format(url, type_video, yt.title, yt.author)
-
-try:                                                                          #DELETE CASO NAO QUEIRA LOGS
-    with open(file_logs, "a") as log:                                         #DELETE CASO NAO QUEIRA LOGS
-        log.write(text)                                                       #DELETE CASO NAO QUEIRA LOGS
-except:                                                                       #DELETE CASO NAO QUEIRA LOGS
-    print("[ERROR] Tipo de link invalido, nao foi possivel salvar nas logs.") #DELETE CASO NAO QUEIRA LOGS
+text = "\n{} Media -> {}, Name -> {}({})".format(url, type_video, yt.title, yt.author)  #DELETE CASO NAO QUEIRA LOGS
+                                                                                        #DELETE CASO NAO QUEIRA LOGS
+try:                                                                                    #DELETE CASO NAO QUEIRA LOGS
+    with open(file_logs, "a") as log:                                                   #DELETE CASO NAO QUEIRA LOGS
+        log.write(text)                                                                 #DELETE CASO NAO QUEIRA LOGS
+except:                                                                                 #DELETE CASO NAO QUEIRA LOGS
+    print("[ERROR] Tipo de link invalido, nao foi possivel salvar nas logs.")           #DELETE CASO NAO QUEIRA LOGS
 
 print("Fazendo download...")
 time.sleep(5)
