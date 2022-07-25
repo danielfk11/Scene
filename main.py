@@ -1,4 +1,3 @@
-# CRIAR EXECUTAVEL PARA TRANSFORMAR EM ARQUIVO/SITE PARA DOWNLOAD. V1.0.0
 from pytube import YouTube                                              
 import time
 
